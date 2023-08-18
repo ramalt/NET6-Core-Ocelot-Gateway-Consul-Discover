@@ -16,7 +16,7 @@ public class ReservationController : ControllerBase
     }
 
 
-    [HttpGet]
+    [HttpGet("{reservationNumber}")]
     public ActionResult GetReservation(int reservationNumber)
     {
         ReservationDTO reservation = _reservationService.GetReservationByNumber(reservationNumber);

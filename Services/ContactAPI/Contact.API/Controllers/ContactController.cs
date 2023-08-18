@@ -7,16 +7,14 @@ namespace Contact.API.Controllers;
 [Route("/api/[controller]")]
 public class ContactController : ControllerBase
 {
-    private readonly ILogger<ContactController> _logger;
     private readonly IContactService _contactService;
 
-    public ContactController(ILogger<ContactController> logger, IContactService contactService)
+    public ContactController(IContactService contactService)
     {
-        _logger = logger;
         _contactService = contactService;
     }
 
-    [HttpGet]
+    [HttpGet("{id}")]
     public ActionResult GetActionResult(int id)
     {
         ContactDto contact = _contactService.GetContactById(id);

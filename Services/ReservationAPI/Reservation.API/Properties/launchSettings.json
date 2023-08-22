@@ -14,7 +14,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "/api/reservation/1",
-      "applicationUrl": "http://localhost:8001",
+      "applicationUrl": "http://localhost:8002",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

@@ -6,7 +6,7 @@
             "DownstreamHostAndPorts": [
                 {
                     "Host": "127.0.0.1",
-                    "Port": 8000
+                    "Port": 8001
                 }
             ],
             "UpstreamPathTemplate": "/c/{id}",
@@ -18,7 +18,7 @@
             "DownstreamHostAndPorts": [
                 {
                     "Host": "::1",
-                    "Port": 8001
+                    "Port": 8002
                 }
             ],
             "UpstreamPathTemplate": "/r/{rezervationNumber}",

@@ -3,26 +3,26 @@
         {
             "DownstreamPathTemplate": "/api/contact/{id}",
             "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "127.0.0.1",
-                    "Port": 8001
-                }
-            ],
+            "UseServiceDiscovery": true,
+            "ServiceName": "ContactService",
             "UpstreamPathTemplate": "/c/{id}",
             "UpstreamHttpMethod": ["Get"]
         },
         {
             "DownstreamPathTemplate": "/api/reservation/{rezervationNumber}",
             "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "::1",
-                    "Port": 8002
-                }
-            ],
+            "UseServiceDiscovery": true,
+            "ServiceName": "ReservationService",
             "UpstreamPathTemplate": "/r/{rezervationNumber}",
             "UpstreamHttpMethod": ["Get"]
         }
-    ]
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "http://127.0.0.1:8000",
+        "ServiceDiscoveryProvider": {
+            "Host": "localhost",
+            "Port": "8500",
+            "Type": "Consul"
+        }
+    }
 }

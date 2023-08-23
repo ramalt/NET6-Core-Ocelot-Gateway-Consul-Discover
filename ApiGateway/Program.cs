@@ -1,5 +1,6 @@
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Ocelot.Provider.Consul;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +17,10 @@ IConfiguration configuration = new ConfigurationBuilder()
 
 // ServicePointManager.ServerCertificateValidationCallback += sender, cert, chain, sslPolicyErrors) => true;
 
-builder.Services.AddOcelot(configuration);
+builder.Services
+    .AddOcelot(configuration)
+    .AddConsul();
+    
 
 var app = builder.Build();
 

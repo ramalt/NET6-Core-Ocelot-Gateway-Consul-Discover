@@ -13,8 +13,8 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "launchUrl": "/api/contact/1",
-      "applicationUrl": "http://localhost:8001",
+      "launchUrl": "api/contact/1",
+      "applicationUrl": "http://127.0.0.1:8001",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

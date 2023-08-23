@@ -1,3 +1,5 @@
+using Contact.API.RegisterExtensions;
+using Contact.API.Settings;
 using Contact.Infrastructure;
 using Contact.Services;
 
@@ -11,6 +13,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IContactService, ContactService>();
+
+ServiceSettings serviceSettings = new ServiceSettings();
+
+// Load settings from appsettings.json
+builder.Configuration.GetSection("ServiceSettings").Bind(serviceSettings);
+
+builder.Services.AddSingleton(serviceSettings);
+builder.Services.AddConsulSettings(serviceSettings);
 
 var app = builder.Build();
 
@@ -26,5 +36,7 @@ if (app.Environment.IsDevelopment())
 // app.UseAuthorization();
 
 app.MapControllers();
+
+app.RegisterConsul(serviceSettings); // Call RegisterConsul method with the loaded service settings
 
 app.Run();

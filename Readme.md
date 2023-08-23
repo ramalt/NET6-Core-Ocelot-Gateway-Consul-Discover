@@ -14,11 +14,35 @@ Bu talimatlar, projenin yerel geliştirme ve test amacıyla nasıl kurulacağın
 
 ### Kurulum
 
-1. Bu depoyu klonlayın:
+1. Bu repoyu klonlayın:
 
 ```bash
-git clone https://github.com/KullaniciAdi/proje-repo.git
-cd proje-repo
+git clone https://github.com/ramalt/NET6-Core-Ocelot-Gateway-Consul-Discover.git
+cd NET6-Core-Ocelot-Gateway-Consul-Discover
+```
+2. Consul 'u başlatın:
+
+```bash
+consul agent -dev
+```
+3. Ocelot Gateway'i başlatın:
+
+```bash
+cd ApiGateway/
+dotnet restore
+dotnet run
+```
+4. Servisleri başlatın:
+
+```bash
+cd ../Services/ContactAPI/Contact.API/ 
+dotnet restore
+dotnet run
+```
+```bash
+cd ../Services/ReservationAPI/Reservation.API/ 
+dotnet restore
+dotnet run
 ```
 
 ## Kullanım

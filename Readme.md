@@ -3,6 +3,8 @@
 ![](https://media.istockphoto.com/id/617886480/tr/foto%C4%9Fraf/ocelot.jpg?s=612x612&w=0&k=20&c=R-H2qZ-pmquMBjM3R57H6mXIHyWNUIpiGgzuhskSM7E=)
 
 Bu proje, Ocelot Gateway'i kullanarak servislerin Consul hizmet keşfi ile kaydedildiği bir örnektir.
+Bağlantı üzerinden bu proje hakkındaki makaleye ulaşabilirsiniz. 
+Medium: [https://medium.com/@ramalto/ec39b10cec49]
 
 ## Başlangıç
 

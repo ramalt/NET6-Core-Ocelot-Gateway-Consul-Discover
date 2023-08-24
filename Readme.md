@@ -62,5 +62,5 @@ GET: http://localhost:8002/api/reservation/{id}
 
 GET: http://localhost:8000/c/{id} - contact service endpoint
 
-GET: http://localhost:5000/r/{id} - reservation service endpoint
+GET: http://localhost:8000/r/{id} - reservation service endpoint
 
